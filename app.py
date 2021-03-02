@@ -44,9 +44,9 @@ def year():
 
 
 
-@app.route('/Results/<var>')
+@app.route('/Results/<var>', methods = ['POST', 'GET'])
 def Results(var):
-    print('successs')
+    print('successs' * 5)
     #pdb.set_trace()#
     #return render_template('Results.html')
     return 'welcome %s' % var
@@ -77,6 +77,7 @@ def Prediction():
         #pdb.set_trace()
         #return render_template()
         #return redirect(url_for('Results', name = prediction_labels))
+        print('TESTING '*5)
         return redirect(url_for('Results', var = prediction_labels))
     else:
       #user = request.args.get('nm')
