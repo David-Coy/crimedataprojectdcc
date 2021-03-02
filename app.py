@@ -84,14 +84,14 @@ def Prediction():
       return render_template('prediction.html')
 
 
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0')
-#     #app.run(debug=True)
-if __name__ == '__main__':
-    HOST = environ.get('SERVER_HOST', 'localhost')
-    print(HOST)
-    try:
-        PORT = int(environ.get('SERVER_PORT', '5555'))
-    except ValueError:
-        PORT = 5555 
-    app.run(HOST, PORT)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
+    #app.run(debug=True)
+# if __name__ == '__main__':
+#     HOST = environ.get('SERVER_HOST', 'localhost')
+#     print(HOST)
+#     try:
+#         PORT = int(environ.get('SERVER_PORT', '5555'))
+#     except ValueError:
+#         PORT = 5555 
+#     app.run(HOST, PORT)
